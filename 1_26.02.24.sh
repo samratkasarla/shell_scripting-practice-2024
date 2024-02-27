@@ -186,3 +186,49 @@
 # fi
 
 
+##### Remove All Whitespace From a String
+# #!/bin/bash
+# str="my name is samrat"
+# strrev=${str// /}
+# echo "str after removing whitespace: $strrev"
+
+
+##### reversing a string
+# #!/bin/bash
+# str="My name is samrat"
+# str1=$(echo $str | rev)
+# echo "The reversed string: $str1"
+
+
+##### Replace a Word in a Sentence
+# #!/bin/bash
+# read -p "Enter the sentence: " str1
+# echo $str1
+# read -p "Enter the word to be replace: " str2
+# read -p "Enter the new word: " str3
+# echo "Modified sentence: ${str1/$str2/$str3}"
+
+
+##### Print Numbers From 5 to 1
+# #!/bin/bash
+# n=5
+# until [ $n == 0 ]
+# do 
+# echo $n
+# n=$((n-1))
+# done
+
+
+##### print even numbers from 1 to 10
+#!/bin/bash
+# for (( i=1; i<=10; i++ ))
+# do 
+# if [ $((i%2)) == 0 ]; then
+#     echo "$i"
+# fi
+# done 
+
+
+##### Print the Multiplication Table of a Number
+#!/bin/bash
+
