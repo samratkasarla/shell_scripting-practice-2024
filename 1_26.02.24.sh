@@ -262,7 +262,86 @@
 
 
 ##### Loop Through Array Elements
+# #!/bin/bash
+# arr=("docker" "kubernetes" "terraform" "nginx" "aws" "gcp")
+# for i in "${arr[@]}"; do
+# echo $i; done
+
+
+##### largest and smallest number in array
 #!/bin/bash
-arr=("docker" "kubernetes" "terraform" "nginx" "aws" "gcp")
+# numbers=(5 10 13 15 12 11)
+# largest=${numbers[0]}
+# smallest=${numbers[0]}
+# for num in "${numbers[@]}"; do
+#     if [ "$num" -gt "$largest" ]; then
+#         largest=$num
+#     fi
+#     if [ "$num" -lt "$smallest" ]; then
+#         smallest=$num
+#     fi
+# done
+# echo "Largest number: $largest"
+# echo "Smallest number: $smallest"
+
+
+##### arranging items in ascending order in array
+#!/bin/bash
+# arr=(24 27 84 11 99)
+# echo "Given array: ${arr[*]}"
+# echo "########"
+# echo "Given array: ${arr[@]}"
+# echo "########"
+# echo "${arr[*]}" | tr ' ' '\n'
+# echo "########"
+# arr=($(echo "${arr[*]}" | tr ' ' '\n' | sort -n | tr '\n' ' '))
+# echo "Sorted array: ${arr[*]}"
+
+
+##### remove the item from array
+#!/bin/bash
+# arr=(11 12 13 14 15)
+# echo "Given array: ${arr[*]}"
+# read -p "Enter the number that you want to remove: " val 
+# arr=("${arr[@]/$val}")
+# echo "Resultant array: ${arr[*]}"
+
+
+##### insert item into array
+# arr=(11 12 13 14 15)
+# echo "Given array: ${arr[*]}"
+# echo "########"
+# arr[6]=16
+# echo "Given array: ${arr[*]}"
+# echo "########"
+# arr[1]=10 # When used index of existing item , it will replace with new value
+# echo "Given array: ${arr[*]}"
+# echo "########"
+# new_elements=(20 21 22)
+# arr=("${arr[@]}" "${new_elements[@]}")  # concatenation
+# echo "${arr[*]}"
+# echo "########"
+# arr+=143
+# echo "${arr[*]}"
+# echo "########"
+
+
+##### Slicing an Array Using Bash Script
+# arr=(11 12 13 14 15 16 17 18)
+# echo "${arr[@]:1:2}"
+# echo "########"
+# echo "${arr[@]:0:2}"
+# echo "########"
+
+
+##### Calculate the Average of an Array of Numbers
+echo "Enter the number of items (seperated by spaces): "
+read -a arr 
+echo "########"
+echo "Given array: ${arr[@]}"
+echo "Number of items in array: ${#arr[@]}"
+sum=0
 for i in "${arr[@]}"; do
-echo $i; done
+sum=$((sum+$i)); done
+echo "Sum of elements: $sum"
+
