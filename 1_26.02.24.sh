@@ -380,3 +380,10 @@
 
 ##### 
 
+#!/bin/bash 
+dir="test"
+for file in "$dir"/*; do
+    mv $file $file.new
+done
+
+
