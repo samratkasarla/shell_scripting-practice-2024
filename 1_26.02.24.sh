@@ -231,4 +231,38 @@
 
 ##### Print the Multiplication Table of a Number
 #!/bin/bash
+# read -p "Enter the number for which you want table: " num
+# for (( i=1; i<=10; i++ ))
+# do 
+#     value=$(($num*$i))
+#     echo "$num x $i = $value"
+# done
 
+
+##### factorial of a number 
+#!/bin/bash
+# read -p "Enter the number: " num
+# temp=1
+# for(( i=1; i<=$num; i++ ))
+# do 
+#    temp=$(($temp*i))
+# done 
+# echo "Factorial of number $num : $temp"
+
+
+##### Calculate the Sum of the First “n” Numbers
+#!/bin/bash
+# read -p "Enter the number: " num
+# sum=0
+# for(( i=1; i<=$num; i++ ))
+# do 
+#    sum=$(( $sum + $i ))
+# done 
+# echo "the sum of n numbers: $sum"
+
+
+##### Loop Through Array Elements
+#!/bin/bash
+arr=("docker" "kubernetes" "terraform" "nginx" "aws" "gcp")
+for i in "${arr[@]}"; do
+echo $i; done
