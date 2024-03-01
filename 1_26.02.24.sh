@@ -335,13 +335,48 @@
 
 
 ##### Calculate the Average of an Array of Numbers
-echo "Enter the number of items (seperated by spaces): "
-read -a arr 
-echo "########"
-echo "Given array: ${arr[@]}"
-echo "Number of items in array: ${#arr[@]}"
-sum=0
-for i in "${arr[@]}"; do
-sum=$((sum+$i)); done
-echo "Sum of elements: $sum"
+# echo "Enter the number of items (seperated by spaces): "
+# read -a arr 
+# echo "########"
+# echo "Given array: ${arr[@]}"
+# echo "Number of items in array: ${#arr[@]}"
+# sum=0
+# for i in "${arr[@]}"; do
+# sum=$((sum+$i)); done
+# avg=$(($sum/${#arr[@]}))
+# echo "Sum of elements: $sum"
+# echo "The average of elements: $avg"
+
+
+##### length of an array
+# arr=(11 12 13 14 15 16)
+# len=${#arr[@]}
+# echo "the length of an array is: $len"
+
+
+##### Check if a String is a Palindrome
+
+# #!/bin/bash
+# str="waaaw"
+# str1=$(echo $str | rev)
+# echo "The reversed string: $str1"
+
+# if [ "$str" == "$str1" ]; then 
+#     echo "given string is palindrome"
+# else
+#     echo "given string is not palindrome"
+# fi
+
+#with function
+# palindrome(){
+#     if [ "$(echo $1| rev)" == "$1" ]; then
+#         echo "Given string is palindrome"
+#     else 
+#         echo "Given string is not palindrome"
+#     fi
+# }
+
+# palindrome "wow"
+
+##### 
 
